@@ -11,9 +11,15 @@
 
         img {
             display: block;
-            cursor: pointer;
-
             width: 100%;
+            cursor: pointer;
+            overflow: hidden;
+            border: 10px solid transparent;
+            transition: .3s;
+
+            &:hover {
+                border: 10px solid $color-header-bgc;
+            }
         }
 
         @media screen and (max-width: 640px) {
@@ -23,14 +29,6 @@
 }
 
 
-
-
-
-// .gallery .gallery__image {
-//     width: 600px;
-//     height: 600px;
-// }
-
 .fullScreen {
     position: fixed;
     width: 100%;
@@ -39,46 +37,41 @@
     top: 0;
     z-index: 1;
     background: rgba(255, 255, 255, 0.7);
-}
 
-// .fullScreen .close {
-//     display: block;
-//     margin: auto;
-// }
+    .img-full-container {
+        position: relative;
+        display: block;
+        margin: 15px auto;
+        width: 90vmin;
+        height: auto;
+    }
 
-.fullScreen .img-full-container {
-    position: relative;
-    display: block;
-    margin: 15px auto;
-    width: 90vmin;
-    height: auto;
-}
+    img {
+        width: 100%;
+    }
 
-.fullScreen img {
-    width: 100%;
-}
+    button {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #ecf0f1;
+        width: 3vw;
+        height: 3vw;
+        border-radius: 50%;
+        font-size: 2vw;
+        color: #ecf0f1;
+        cursor: pointer;
 
-.fullScreen button {
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
-    background-color: transparent;
-    outline: none;
-    border: 1px solid #ecf0f1;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 50%;
-    font-size: 2vw;
-    color: #ecf0f1;
-    cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color .3s, color .3s;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color .3s, color .3s;
-
-    &:hover {
-        background-color: #ecf0f1;
-        color: #2c3e50;
+        &:hover {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
     }
 }
