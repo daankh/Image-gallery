@@ -46,10 +46,10 @@
 //     margin: auto;
 // }
 
-.fullScreen .container {
+.fullScreen .img-full-container {
     position: relative;
     display: block;
-    margin: 15px auto 5px;
+    margin: 15px auto;
     width: 80vw;
     height: auto;
 }
@@ -60,8 +60,8 @@
 
 .fullScreen button {
     position: absolute;
-    top: 2vh;
-    right: 2vh;
+    top: .5rem;
+    right: .5rem;
     background-color: transparent;
     outline: none;
     border: 1px solid #ecf0f1;

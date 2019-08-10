@@ -39,7 +39,7 @@ var renderGallery = function (destination, format, numberOfImages, imagesInRow, 
                 })
 
                 var container = document.createElement('div')
-                container.classList.add('container')
+                container.classList.add('img-full-container')
 
                 var img = document.createElement('img')
                 img.setAttribute('src', this.getAttribute('src'))
@@ -53,7 +53,7 @@ var renderGallery = function (destination, format, numberOfImages, imagesInRow, 
                 button.addEventListener('click', function (e) {
                     e.stopImmediatePropagation()
 
-                    var gallery = this.parentElement
+                    var gallery = this.parentElement.parentElement;
                     gallery.parentElement.removeChild(gallery)
                 })
 
